@@ -6,7 +6,7 @@ class Instrument(models.Model):
     quantity = models.IntegerField()
     market_value = models.FloatField()
     percentage_to_nav = models.FloatField()
-    isin = models.CharField(max_length=50)
+    isin = models.CharField(max_length=50, unique=True)
     yield_percentage = models.FloatField(null=True, blank=True)
     ytc = models.FloatField(null=True, blank=True)
     instrument_type = models.CharField(max_length=50)  # Equity, Debt, Money Market, etc.
