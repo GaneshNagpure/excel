@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Analysis Results</title>
+</head>
+<body>
+
+    <h1>Portfolio Analysis</h1>
+
+    <div>
+        <h2>Portfolio Summary</h2>
+        <ul>
+            <li>Equity Total: ₹{{ equity_total }} Lakhs ({{ equity_percentage }}%)</li>
+            <li>Debt Total: ₹{{ debt_total }} Lakhs ({{ debt_percentage }}%)</li>
+            <li>Others Total: ₹{{ others_total }} Lakhs ({{ others_percentage }}%)</li>
+            <li>Total Market Value: ₹{{ total_market_value }} Lakhs</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Top 5 Instruments by % Age to NAV (Pie Chart)</h2>
+        <!-- Hover to show values with title attribute -->
+        <img src="data:image/png;base64,{{ img_instruments }}" alt="Top 5 Instruments Pie Chart" title="Top 5 Instruments by % Age to NAV">
+    </div>
+
+    <div>
+        <h2>Top 5 Industries by Investment (Pie Chart)</h2>
+        <!-- Hover to show values with title attribute -->
+        <img src="data:image/png;base64,{{ img_industries }}" alt="Top 5 Industries Pie Chart" title="Top 5 Industries by Investment">
+    </div>
+
+    <div>
+        <h2>Market Value Breakdown (Horizontal Bar Graph)</h2>
+        <!-- Hover to show values with title attribute -->
+        <img src="data:image/png;base64,{{ img_bar }}" alt="Market Value Breakdown Bar Chart" title="Market Value Breakdown by Category">
+    </div>
+
+</body>
+</html>
